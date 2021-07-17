@@ -1,0 +1,17 @@
+<div class="card">
+  <%= link_to image_tag(prototype.image, class: :card__img ), root_path%>
+  <div class="card__body">
+    <%= link_to prototype.prototype_title, root_path, class: :card__title%>
+    <p class="card__summary">
+      <%= prototype.prototype_catch_copy %>
+    </p>
+    <ul class="more_list">
+      <li>
+        <%= link_to '詳細', prototype_path(prototype.id), method: :get %>
+      </li>
+    </ul>
+    <% @prototype.each do |prototype|%>
+    <%= link_to prototype.user.name, user_path(prototype.id), class: :card__user %>
+    <% end %>
+  </div>
+</div>
