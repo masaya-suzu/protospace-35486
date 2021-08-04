@@ -26,7 +26,7 @@
       </table>
       <h2 class="page-heading">
         <%= "ユーザー名さんのプロトタイプ"%>
-        <% @user.prototype.each do |prototype| %>
+        <% @user.prototypes.each do |prototype| %>
           <%= render partial: "prototypes/prototype", collection: @prototype %>
         <% end %>
       </h2>

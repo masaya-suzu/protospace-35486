@@ -11,7 +11,7 @@
       </li>
     </ul>
     <% @prototype.each do |prototype|%>
-    <%= link_to prototype.user.name, user_path(prototype.id), class: :card__user %>
+    <%= link_to prototype.user.name, user_path(prototype.user.id), class: :card__user %>
     <% end %>
   </div>
 </div>
