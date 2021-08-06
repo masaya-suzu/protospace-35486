@@ -31,7 +31,7 @@ class PrototypesController < ApplicationController
   def update
     if @prototype.update(prototype_params)
       flash[:success] = "Profile updated"
-      redirect_to root_path
+      redirect_to prototype_path(@prototype)
     else
       render :edit
     end
